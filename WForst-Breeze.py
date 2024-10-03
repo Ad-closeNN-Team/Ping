@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 url = "https://profile-counter.glitch.me/WForst_Breeze/count.svg"
-a = 20
+a = 20000
 while a > 0:
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'lxml')
