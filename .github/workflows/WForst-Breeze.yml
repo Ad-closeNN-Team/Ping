@@ -16,9 +16,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        
+
       - name: Install dependencies
-        run: pip install beautifulsoup4
+        run: | 
+            pip install beautifulsoup4
+            pip install lxml
 
       - name: Ping
         run: python WForst-Breeze.py
