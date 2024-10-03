@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 url = "https://profile-counter.glitch.me/WForst_Breeze/count.svg"
 a = 0
-while a <= 21100:
+while a <= 20000:
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'lxml')
     numbers = ''.join([tspan.get_text() for tspan in soup.find_all('tspan')])

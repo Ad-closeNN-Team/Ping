@@ -7,7 +7,7 @@ on:
     branches: [main]
 
   schedule:
-        - cron: '*/1 * * * *' # 每分钟运行一次
+        - cron: '*/59 * * * *' # 每分钟运行一次
 jobs:
   # 构建工作
   build:
