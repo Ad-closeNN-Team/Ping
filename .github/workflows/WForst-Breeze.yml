@@ -10,7 +10,7 @@ on:
   # 允许你从 Actions 选项卡手动运行此工作流程
   workflow_dispatch:
   schedule:
-        - cron: '*/1 * * * *' # 每分钟运行一次
+        - cron: '*/2 * * * *' # 每分钟运行一次
 jobs:
   # 构建工作
   build:
@@ -26,4 +26,4 @@ jobs:
 
       - name: Ping
         run: python WForst-Breeze.py
-        timeout-minutes: 0.5
+        timeout-minutes: 1
