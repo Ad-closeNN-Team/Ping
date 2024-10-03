@@ -1,26 +1,15 @@
-# 构建 VitePress 站点并将其部署到 GitHub Pages 的示例工作流程
 name: Ping WForst-Breeze
-
 on:
-  # 在针对 `main` 分支的推送上运行。如果你
-  # 使用 `master` 分支作为默认分支，请将其更改为 `master`
-  push:
-    branches: [main]
-
-  schedule:
-        - cron: '*/1 * * * *' # 每分钟运行一次
+    schedule:
+      - cron: '*/1 * * * *'
 jobs:
-  # 构建工作
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Install dependencies
-        run: | 
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Install dependencies
+      run: | 
             pip install beautifulsoup4
             pip install lxml
-
-      - name: Ping
-        run: python WForst-Breeze.py
+            python WForst-Breeze.py
