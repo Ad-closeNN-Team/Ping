@@ -5,7 +5,7 @@ url = "https://profile-counter.glitch.me/WForst_Breeze/count.svg"
 a = 0
 while a <= 21111:
     response = requests.get(url)
-    soup = BeautifulSoup(response.content, 'lxml')
+    soup = BeautifulSoup(response.content, 'xml')
     numbers = ''.join([tspan.get_text() for tspan in soup.find_all('tspan')])
     if response.status_code == 200:
         print(f"[{a}] GET {numbers} OK: "+str(response.status_code))
