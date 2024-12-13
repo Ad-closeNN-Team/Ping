@@ -23,3 +23,31 @@ jobs:
 
       - name: Ping
         run: python WForst-Breeze.py
+
+  builda:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: | 
+            pip install beautifulsoup4
+            pip install lxml
+
+      - name: Ping
+        run: python WForst-Breeze.py
+
+  buildb:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: | 
+            pip install beautifulsoup4
+            pip install lxml
+
+      - name: Ping
+        run: python WForst-Breeze.py
